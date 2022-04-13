@@ -6,6 +6,7 @@ from brownie import (
     MockV3Aggregator,
     MockDAI,
     MockWETH,
+    MockERC20,
     Contract,
     web3,
 )
@@ -117,6 +118,10 @@ def deploy_mocks(decimals=DECIMALS, initial_value=INITIAL_VALUE):
     print("Deploying Mock WETH")
     weth_token = MockWETH.deploy({"from": account})
     print(f"Deployed to {weth_token.address}")
+
+    print("Deploying Mock ERC20...")
+    mock_erc20 = MockERC20.deploy({"from": account})
+    print(f"Deployed to {mock_erc20.address}")
 
     print("Mocks Deployed!")
 
