@@ -21,6 +21,7 @@ interface BalanceMsgProps {
     tokenImgSrc: string
 }
 
+// This component is responsible to render the balance of an account's token
 export const BalanceMsg = ({label, amount, tokenImgSrc}: BalanceMsgProps) => {
     const classes = useStyles()
     return (

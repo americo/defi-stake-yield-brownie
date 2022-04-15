@@ -1,6 +1,7 @@
 import { useEthers } from "@usedapp/core";
 import { Button, makeStyles } from "@material-ui/core";
 
+// CSS using makeStyles function of material-ui
 const useStyles = makeStyles((theme) => ({
     // CSS of container
     container: {
@@ -13,10 +14,10 @@ const useStyles = makeStyles((theme) => ({
 
 // Header is a function, and this is a content of the function
 export const Header = () => {
-    const classes = useStyles();
+    const classes = useStyles(); // Saving useStyles() in classes const
     const { account, activateBrowserWallet, deactivate } = useEthers(); // Import wallet functions from useEthers
 
-    const isConnected = account !== undefined;
+    const isConnected = account !== undefined; // If is connceted set account, if not set undefined
 
     return (
         <div className={classes.container}>

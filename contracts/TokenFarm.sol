@@ -150,8 +150,9 @@ contract TokenFarm is Ownable {
         ) {
             if (allowedTokens[allowedTokensIndex] == _token) {
                 return true;
+            } else {
+                return false;
             }
         }
-        return false;
     }
 }
